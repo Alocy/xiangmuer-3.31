@@ -47,8 +47,8 @@
 		24E646AD1CAE859D00245B0E /* ios-social-sdk-share-quick.html in Resources */ = {isa = PBXBuildFile; fileRef = 24E6468E1CAE859D00245B0E /* ios-social-sdk-share-quick.html */; };
 		24E646AE1CAE859D00245B0E /* ios-social-sdk-socialbar.html in Resources */ = {isa = PBXBuildFile; fileRef = 24E6468F1CAE859D00245B0E /* ios-social-sdk-socialbar.html */; };
 		24E646AF1CAE859D00245B0E /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 24E646901CAE859D00245B0E /* markdown.css */; };
-		24E646B11CAFC3C700245B0E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E646B01CAFC3C700245B0E /* icon.png */; };
-		24E646B51CAFCBD100245B0E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E646B41CAFCBD100245B0E /* share.png */; };
+		24E647F61CB01FA500245B0E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E647F51CB01FA500245B0E /* Icon.png */; };
+		24E647F81CB01FD200245B0E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E647F71CB01FD200245B0E /* share.png */; };
 		27B5831545E7237EA405AA8A /* libPods-项目二.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC975BC02E00BB79DAA8665 /* libPods-项目二.a */; };
 		9212E3F71C9BDC8400EBE3A0 /* RetrievePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9212E3F61C9BDC8400EBE3A0 /* RetrievePasswordViewController.m */; };
 		924B29CE1CA51F4D00FA5564 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B29CD1CA51F4D00FA5564 /* HomeViewController.m */; };
@@ -210,8 +210,8 @@
 		24E6468E1CAE859D00245B0E /* ios-social-sdk-share-quick.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios-social-sdk-share-quick.html"; sourceTree = "<group>"; };
 		24E6468F1CAE859D00245B0E /* ios-social-sdk-socialbar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ios-social-sdk-socialbar.html"; sourceTree = "<group>"; };
 		24E646901CAE859D00245B0E /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
-		24E646B01CAFC3C700245B0E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
-		24E646B41CAFCBD100245B0E /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		24E647F51CB01FA500245B0E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		24E647F71CB01FD200245B0E /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		9212E3F51C9BDC8400EBE3A0 /* RetrievePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetrievePasswordViewController.h; sourceTree = "<group>"; };
 		9212E3F61C9BDC8400EBE3A0 /* RetrievePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetrievePasswordViewController.m; sourceTree = "<group>"; };
 		924B29CC1CA51F4D00FA5564 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
@@ -737,12 +737,12 @@
 		92F460A91C9AD457002CA9E7 /* 素材 */ = {
 			isa = PBXGroup;
 			children = (
-				24E646B41CAFCBD100245B0E /* share.png */,
-				24E646B01CAFC3C700245B0E /* icon.png */,
 				92F460B31C9AE8DC002CA9E7 /* 头像选择.png */,
+				24E647F51CB01FA500245B0E /* Icon.png */,
 				92F460A71C9AD235002CA9E7 /* 背景.png */,
 				92F460AA1C9AD5A7002CA9E7 /* 返回.png */,
 				95035CCA1CABAEE600E6FC4C /* zan.jpg */,
+				24E647F71CB01FD200245B0E /* share.png */,
 				95035CCC1CABAEF100E6FC4C /* 2.jpg */,
 				95035CCD1CABAEF100E6FC4C /* and.png */,
 				950E112C1CABC53B001E8B7C /* jiaoya.jpg */,
@@ -990,11 +990,12 @@
 				24E646911CAE859D00245B0E /* UMSocialLocalizable.strings in Resources */,
 				92F460A81C9AD235002CA9E7 /* 背景.png in Resources */,
 				24E646AF1CAE859D00245B0E /* markdown.css in Resources */,
-				24E646B51CAFCBD100245B0E /* share.png in Resources */,
+				24E647F81CB01FD200245B0E /* share.png in Resources */,
 				24E646AD1CAE859D00245B0E /* ios-social-sdk-share-quick.html in Resources */,
 				24E646981CAE859D00245B0E /* UMSLoginViewController.xib in Resources */,
 				24E646A41CAE859D00245B0E /* iOS-social-analytics-releasenote.html in Resources */,
 				24E6469A1CAE859D00245B0E /* UMSShareListController.xib in Resources */,
+				24E647F61CB01FA500245B0E /* Icon.png in Resources */,
 				95035CA81CABAE8700E6FC4C /* MJRefresh.bundle in Resources */,
 				24E646A11CAE859D00245B0E /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				92F460B41C9AE8DC002CA9E7 /* 头像选择.png in Resources */,
@@ -1008,7 +1009,6 @@
 				24E646A81CAE859D00245B0E /* ios-social-sdk-like.html in Resources */,
 				24E646A71CAE859D00245B0E /* ios-social-sdk-comment-quick.html in Resources */,
 				24E646A51CAE859D00245B0E /* iOS-social-releasenote.html in Resources */,
-				24E646B11CAFC3C700245B0E /* icon.png in Resources */,
 				95035CE31CABB07600E6FC4C /* CustomCollectionViewCell.xib in Resources */,
 				24E646AE1CAE859D00245B0E /* ios-social-sdk-socialbar.html in Resources */,
 				24E646A91CAE859D00245B0E /* ios-social-sdk-login-detail.html in Resources */,
