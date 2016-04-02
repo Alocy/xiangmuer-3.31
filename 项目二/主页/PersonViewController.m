@@ -40,8 +40,8 @@
     [self initUserInterface];
     [self.view addSubview:self.headImageView];
     [self.view addSubview:self.nicknameLabel];
-    [self.view addSubview:self.tableview];
-    [self.view addSubview:self.logoutButton];
+//    [self.view addSubview:self.tableview];
+//    [self.view addSubview:self.logoutButton];
     [self initDataSource];
 }
 
