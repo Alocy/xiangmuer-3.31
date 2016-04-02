@@ -10,6 +10,9 @@
 #import "Custom.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "UIImageView+WebCache.h"
+
+
+
 #define COLOR_RGB(R, G, B) [UIColor colorWithRed:((R) / 255.0) green:((G) / 255.0) blue:((B) / 255.0) alpha:1]
 int hang, textL, textY, pictL, pictY ,goodN, zanint = 0;
 @interface Custom1TableViewCell ()
@@ -81,6 +84,10 @@ int hang, textL, textY, pictL, pictY ,goodN, zanint = 0;
     return animation;
 }
 // 自适应 大小
+#pragma mark --- private method
+
+
+
 -(void)exchange{
     
     textL = (int)_textLength / 25;
@@ -117,12 +124,12 @@ int hang, textL, textY, pictL, pictY ,goodN, zanint = 0;
         pictL = pictL + 1;
     }
     self.goodLike.frame = CGRectMake(10,textL * 30 + 140 * pictL + 80, 40, 40);
+
+    self.goodNumber.frame = CGRectMake(70, textL * 30 + 140 * pictL + 80, 40, 40);
     
-    self.goodNumber.frame = CGRectMake(100, textL * 30 + 140 * pictL + 80, 40, 40);
+    self.footprint.frame = CGRectMake(180, textL * 30 + 140 * pictL + 80, 40, 40);
     
-    self.footprint.frame = CGRectMake(210, textL * 30 + 140 * pictL + 80, 40, 40);
-    
-    self.allComments.frame = CGRectMake(300, textL * 30 + 140 * pictL + 80, 40, 40);
+    self.allComments.frame = CGRectMake(240, textL * 30 + 140 * pictL + 80, 40, 40);
     
     self.gradientLayer.frame = CGRectMake(0, 0, 414,self.goodLike.center.y + self.goodLike.frame.size.height);
     
@@ -306,6 +313,9 @@ int hang, textL, textY, pictL, pictY ,goodN, zanint = 0;
     }
     return _goodLike;
 }
+
+
+
 -(UIImageView *)footprint{
     if (!_footprint) {
         _footprint = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -332,6 +342,8 @@ int hang, textL, textY, pictL, pictY ,goodN, zanint = 0;
     }
         return _goodNumber;
 }
+
+
 -(UILabel *)allComments{
     if (!_allComments) {
         _allComments = ({

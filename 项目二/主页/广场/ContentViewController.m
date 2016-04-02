@@ -11,6 +11,11 @@
 #import <AVOSCloud/AVOSCloud.h>
 #import "Custom.h"
 #import "UIImageView+WebCache.h"
+
+#import "UMSocialSnsService.h"
+#import "UMSocialSnsPlatformManager.h"
+#import "UMSocialAccountManager.h"
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 static int textL, textY = 0;
@@ -27,14 +32,15 @@ static int textL, textY = 0;
 @property (nonatomic, retain) UIButton * goodButtons;
 @property (nonatomic, retain)UIImageView * footprint;
 
+
 @property (nonatomic, retain)UILabel * labelNameTime;
 @property (nonatomic, retain)UILabel * commentLabel;
 @property (nonatomic,strong) UIScrollView * scrollView;
 
 @property (nonatomic, retain)NSMutableArray * commentArr;
 @property (nonatomic,retain)NSString * fucker;
--(void)editerbarbuttonPressed:(UIBarButtonItem *)sender;
--(void)saveButtonPressed:(UIButton *)sender;
+//-(void)editerbarbuttonPressed:(UIBarButtonItem *)sender;
+//-(void)saveButtonPressed:(UIButton *)sender;
 @end
 
 @implementation ContentViewController
@@ -43,14 +49,13 @@ static int textL, textY = 0;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIBarButtonItem * rightItem = [[UIBarButtonItem alloc] initWithTitle:@"..." style:UIBarButtonItemStylePlain target:self action:@selector(editerbarbuttonPressed:)];
-    self.navigationItem.rightBarButtonItem = rightItem;
+        UIBarButtonItem *  shareItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"share"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(action_shareThefeeling:)];
+    self.navigationItem.rightBarButtonItem = shareItem;
 
     
     _instance = [Instance shareInstance];
     NSString *str = _instance.diary;
     NSString *picNumber = _instance.picN;
-    
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"详情";
@@ -174,6 +179,57 @@ static int textL, textY = 0;
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.field];
 }
+#pragma mark -- private method 
+
+- (void) action_shareThefeeling:(UIBarButtonItem *)sender{
+    
+    
+    
+    Instance * instance = [Instance shareInstance];
+    ContentViewController * infotmation = [[ContentViewController alloc] init];
+//    infotmation.indexRow = indexPath.row;
+    
+//    infotmation.textBlock = ^(NSString *str) {
+//        
+//        _dataSource[indexPath.row] = str;
+//        
+//        [self.tableView reloadData];
+//    };
+    
+//    instance.idid = self.dataSourceId[indexPath.section];
+//    instance.name = self.dataSourcewho[indexPath.section];
+//    instance.diary = self.dataSource[indexPath.section];
+//    instance.array = self.dataSourcePictures[indexPath.section];
+//    
+//    infotmation.zannameS = self.dataSourcezanname[indexPath.section];
+//    int zansNumber = (int)infotmation.zannameS.count;
+//    infotmation.goodNumber.text = [NSString stringWithFormat:@"%d",zansNumber];
+//    
+//    NSMutableArray * foot = self.dataSourceComments[indexPath.section];
+//    int commentNumber = (int)foot.count;
+//    infotmation.allComments.text = [NSString stringWithFormat:@"%d",commentNumber];
+//    
+//    NSMutableArray * arr = self.dataSourcezanname[indexPath.section];
+//    instance.zans = [NSString stringWithFormat:@"%ld",arr.count];
+//    NSLog(@"第%ld个",(long)indexPath.section);
+//    [self.navigationController pushViewController:infotmation animated:YES];
+    
+    
+    
+    
+    __weak typeof(self)  weakSelf = self;
+    [UMSocialSnsService presentSnsIconSheetView:weakSelf
+                                         appKey:@"507fcab25270157b37000010"
+                                      shareText:nil
+                                     shareImage:[UIImage imageNamed:@"icon"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,
+                                                 UMShareToTencent,
+                                                 UMShareToQzone,
+                                                 UMShareToWechatSession,
+                                                 UMShareToWechatTimeline,
+                                                 UMShareToQQ,nil]
+                                       delegate:nil];
+}
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 
@@ -285,6 +341,8 @@ static int textL, textY = 0;
     }
     return _goodButtons;
 }
+
+
 -(UILabel *)goodNumber{
     if (!_goodNumber) {
         _goodNumber = ({

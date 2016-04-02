@@ -71,6 +71,8 @@ int picL = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+     self.edgesForExtendedLayout = UIRectEdgeNone;
     _instance = [Instance shareInstance];
     
     [self initUserDataSouce];
